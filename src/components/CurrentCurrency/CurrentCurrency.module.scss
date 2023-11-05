@@ -1,0 +1,19 @@
+.main {
+    width: 100%;
+    min-height: 190px;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+
+    .currnecy {
+        color: #FFF;
+        font-family: Kreon;
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
