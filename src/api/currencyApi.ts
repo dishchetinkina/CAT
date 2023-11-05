@@ -1,7 +1,7 @@
 import axios from "axios"
 
 interface ICuerrencyApi {
-    getCurrencies: () => Promise<Array<any>>
+    getCurrencies: () => Promise<any>
 }
 
 

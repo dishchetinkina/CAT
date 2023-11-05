@@ -1,3 +1,8 @@
+$breakpoint-mobile: 420px;
+$breakpoint-720p: 1280px;
+$breakpoint-900p: 1600px;
+$breakpoint-1080p: 1920px;
+
 .main {
     width: 100%;
     position: relative;
@@ -5,7 +10,17 @@
     flex-direction: row;
     justify-content: space-between;
 
+    @media screen and (max-width: $breakpoint-mobile) {
+        justify-content: center;
+    }
+
     .leftSide {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            align-items: center;
+        }
 
         .textLogo {
             display: flex;
@@ -15,7 +30,7 @@
 
             .cat {
                 color: black;
-                font-size: 96px;
+                font-size: clamp(96px, 15vw, 288px);
                 font-family: Kreon;
                 font-weight: 500;
                 word-wrap: break-word;
@@ -25,10 +40,11 @@
             .words {
                 display: flex;
                 flex-direction: column;
-                margin-left: 10px;
+                margin-left: 2vw;
+
                 .word {
                     color: black;
-                    font-size: 20px;
+                    font-size: clamp(20px, 3vw, 60px);
                     font-family: Kreon;
                     font-weight: 300;
                     word-wrap: break-word;
@@ -39,19 +55,60 @@
         }
 
         .selectContainer {
-            padding-left: 24px;
-            .select {
-                max-width: 181px;
+            padding-left: 32px;
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                padding-left: 0px;
+            }
+
+            color: #000;
+            font-size: clamp(20px, 2vw, 50px);
+            font-family: Kreon;
+            font-weight: 300;
+            word-wrap: break-word;
+
+            .selectControl {
+                border-radius: 18px;
+
+                @media screen and (max-width: $breakpoint-mobile) {
+                    border-radius: 12px;
+                    border: 2px solid #DAD6D6;
+                }
+
+                width: clamp(180px, 30vw, 440px);
+                border: 3px solid #DAD6D6;
+                box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+            }
+
+            .selectValueContainer {
+                padding: 8px 16px;
+                color: #000;
+
+            }
+
+            .selectMenu {
+                width: clamp(180px, 30vw, 440px);
+            }
+
+            .selectIcon {
+                margin-right: 24px;
+            }
+
+            .Option {
+                color: #000;
+                border: 1px solid #d8d8d8;
             }
         }
 
     }
 
     .rightSide {
+        @media screen and (max-width: $breakpoint-mobile) {
+            display: none;
+        }
+
         .img {
             width: 30vw;
-            // width: 225px;
-            // height: 341px;
         }
     }
 }

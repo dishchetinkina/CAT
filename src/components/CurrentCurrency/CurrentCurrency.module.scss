@@ -1,6 +1,17 @@
+$breakpoint-mobile: 420px;
+$breakpoint-720p: 1280px;
+$breakpoint-900p: 1600px;
+$breakpoint-1080p: 1920px;
+
+
+
 .main {
+    @media screen and (max-width: $breakpoint-mobile) {
+        min-height: 65vh;
+    }
+
     width: 100%;
-    min-height: 190px;
+    min-height: 40vh;
     position: fixed;
     bottom: 0px;
     display: flex;
@@ -11,9 +22,10 @@
     .currnecy {
         color: #FFF;
         font-family: Kreon;
-        font-size: 96px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        text-align: center;
+        font-size: clamp(60px, 10vw, 260px)
     }
 }
