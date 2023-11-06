@@ -1,9 +1,12 @@
 {
+  "homepage": "https://dishchetinkina.github.io/CAT",
   "name": "cat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy" : "npm run build:prod",
+    "deploy" : "gh-pages -d build",
     "start": "webpack serve --env goal=3000",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development"
@@ -19,6 +22,7 @@
     "@types/webpack": "^5.28.4",
     "@types/webpack-dev-server": "^4.7.2",
     "css-loader": "^6.8.1",
+    "gh-pages": "^6.0.0",
     "mini-css-extract-plugin": "^2.7.6",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
